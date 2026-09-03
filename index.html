@@ -6,24 +6,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Syncopate:wght@400;700&family=Syne:wght@400..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Syncopate:wght@400;700&family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/chess.js" defer></script>
     <title>DOC — Portfolio</title>
   </head>
 
   <body>
     <!-- ======================= header ==================== -->
-    <header class="site-header">
-      <nav class="site-nav">
-        <a class="site-logo" href="#">DOC</a>
-        <div class="site-nav__actions">
-          <button class="site-nav__menu-button" type="button">MENU</button>
-          <a class="site-nav__contact" href="#contact">LASS UNS REDEN</a>
+    <header class="header">
+      <nav class="header__nav">
+        <a class="header__logo" href="#">DOC</a>
+        <div class="header__actions">
+          <button class="header__menu-button" type="button">MENU</button>
+          <a class="header__contact" href="#contact">LASS UNS REDEN</a>
         </div>
       </nav>
     </header>
@@ -33,13 +34,110 @@
       <section class="hero">
         <img
           class="hero__image"
-          src="./images/hero_temp.webp"
+          src="./images/hero.jpg"
           alt="Porträt eines Fotografen"
         />
         <div class="hero__content">
-          <h1 class="hero__title">Fotografen von Weltrang</h1>
+          <div class="hero__title-wrapper">
+            <h1 class="hero__title">
+              <span class="hero__title-line">
+                valerie <span class="hero__title-accent">&</span>
+              </span>
+
+              <span class="hero__title-line hero__title-line--vadim">
+                vadim
+              </span>
+
+              <span class="hero__title-line"> doctorov </span>
+
+              <span
+                class="hero__title-line hero__title-line--art hero__title-accent"
+              >
+                ar<span class="hero__title-t">t</span>
+              </span>
+              <span class="hero__title-line hero__title-accent"
+                >foundation</span
+              >
+            </h1>
+          </div>
         </div>
       </section>
+
+      <!-- =========================  бегущая строка  ================ -->
+      <section class="clients-marquee">
+        <div class="clients-marquee__track">
+          <div class="clients-marquee__group">
+            <span class="clients-marquee__item">01 Ideation</span>
+            <span class="clients-marquee__item">02 Scripting & Strategy</span>
+            <span class="clients-marquee__item">03 Post-production </span>
+            <span class="clients-marquee__item">04 Production</span>
+            <span class="clients-marquee__item">05 Post-production</span>
+          </div>
+
+          <div class="clients-marquee__group">
+            <span class="clients-marquee__item">01 Ideation</span>
+            <span class="clients-marquee__item">02 Scripting & Strategy</span>
+            <span class="clients-marquee__item">03 Post-production </span>
+            <span class="clients-marquee__item">04 Production</span>
+            <span class="clients-marquee__item">05 Post-production</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===============================  Intro ================================= -->
+
+      <section class="intro">
+        <div class="intro__main">
+          <h2 class="intro__title">
+            We are a united
+            <span class="intro__accent">community of photographers</span>
+            by a passion for visual storytelling — bringing together different
+            perspectives, ideas and experiences to create images that
+            <span class="intro__accent">stay in memory.</span>
+          </h2>
+        </div>
+        <div class="intro__side">
+          <h3 class="intro__side__label">WHO WE ARE</h3>
+          <div class="intro__side__social">
+            <a href="#" aria-label="Behance">
+              <img src="./images/ico/behance.svg" alt="" />
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <img src="./images/ico/linkedin.svg" alt="" />
+            </a>
+
+            <a href="#" aria-label="Twitter">
+              <img src="./images/ico/twitter.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===============================  Chess ================================= -->
+      <!-- 
+      <section class="aboutAs">
+        <div class="aboutAs__chessBack"></div>
+      </section> -->
+
+      <!-- ============================================================================ -->
+
+      <section class="Calculator">
+        <div class="Calculator__Items">
+          <input class="Calculator__Itrms__Input1" type="text" />
+          <select class="Calculator__Itrms__Operator" name="" id="">
+            <option value="">+</option>
+            <option value="">-</option>
+            <option value="">*</option>
+            <option value="">/</option>
+          </select>
+          <input class="Calculator__Itrms__Input2" type="text" />
+
+          <input class="Calculator__Itrms__result" type="text" />
+        </div>
+      </section>
+
+      input
     </main>
   </body>
 </html>

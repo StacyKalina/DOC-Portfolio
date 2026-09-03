@@ -1,0 +1,84 @@
+/* ======================== section Hero =========================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 54px 40px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  height: min(100vh, 900px);
+  display: grid;
+  grid-template-columns: 46% 54%;
+  background-color: var(--color-bg);
+  gap: 24px;
+  padding: 25px;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.hero__content {
+  min-width: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero__title-wrapper {
+  width: 100%;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-size: clamp(30px, 5vw, 76px);
+  line-height: 0.95;
+
+  width: fit-content;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title-accent {
+  color: var(--color-accent);
+}
+
+.hero__title-t {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.hero__title-line--vadim {
+  text-align: right;
+}
+
+.hero__title-line--art {
+  padding-left: 21.7%;
+}
+
+/* ======================== section abotAs =========================== */
+.aboutAs__cell {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.aboutAs__chessBack {
+  display: flex;
+  flex-wrap: wrap;
+  width: 2500px;
+}

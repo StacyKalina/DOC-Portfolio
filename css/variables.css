@@ -2,12 +2,13 @@
   /* Colors */
   --color-bg: #020204;
   --color-text: #f5f5f5;
-  --color-accent: #d6ff00;
-  --color-muted: #a0a0a0;
+  --color-accent: #ff2132;
+  --color-muted: #dbdbdb;
 
   /* Fonts */
-  --font-main: "Название твоего шрифта", sans-serif;
-  --font-heading: "Название второго шрифта", sans-serif;
+  --font-main: "Rajdhani", sans-serif;
+  --font-heading: "Syncopate", sans-serif;
+  --font-special: "IBM Plex Sans", sans-serif;
 
   /* Spacing */
   --space-xs: 8px;
