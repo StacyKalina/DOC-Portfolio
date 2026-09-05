@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="./js/chess.js" defer></script>
+    <script src="./js/header.js" defer></script>
     <title>DOC — Portfolio</title>
   </head>
 
@@ -21,12 +21,80 @@
     <!-- ======================= header ==================== -->
     <header class="header">
       <nav class="header__nav">
-        <a class="header__logo" href="#">DOC</a>
+        <a class="header__logo" href="#">
+          <img
+            class="header__logo-image"
+            src="./images/Logo_doc.svg"
+            alt="Doctorov"
+          />
+        </a>
         <div class="header__actions">
           <button class="header__menu-button" type="button">MENU</button>
+
           <a class="header__contact" href="#contact">LASS UNS REDEN</a>
         </div>
       </nav>
+      <div class="header__overlay">
+        <div class="header__overlay-top">
+          <a href="./index.html" class="header__overlay-logo">
+            <span class="header__overlay-logo-text">
+              VALERIE & VADIM DOCTOROV
+              <span class="header__overlay-logo-accent">ART FOUNDATION</span>
+            </span>
+
+            <img
+              class="header__overlay-logo-image"
+              src="./images/Logo_doc.svg"
+              alt=""
+            />
+          </a>
+          <div class="header__overlay-actions">
+            <button class="header__language-button" type="button">UA</button>
+            <button class="header__close-button" type="button">CLOSE</button>
+          </div>
+        </div>
+        <nav class="header__overlay-nav">
+          <a href="#" class="header__overlay-link">
+            <span class="header__number-one">01</span>
+            <span>home</span>
+          </a>
+          <a href="#" class="header__overlay-link">
+            <span>02</span>
+            <span>about</span>
+          </a>
+          <a href="#" class="header__overlay-link">
+            <span>03</span>
+            <span>po<span class="header__overlay-r">r</span>tfolio</span>
+          </a>
+          <a href="#" class="header__overlay-link">
+            <span>04</span>
+            <span>community</span>
+          </a>
+        </nav>
+        <div class="header__overlay-bottom">
+          <div class="header__overlay-bottom-left">
+            <a class="header__overlay-book" href="#book">the book</a>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+          <div class="header__overlay-socials">
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+          </div>
+        </div>
+        <a
+          class="header__call-button"
+          href="https://wa.me/491234567890"
+          target="_blank"
+          rel="noopener"
+          aria-label="Write to us on WhatsApp"
+        >
+          <img
+            class="header__call-button-icon"
+            src="./images/ico/ico_call.svg"
+            alt=""
+          />
+        </a>
+      </div>
     </header>
 
     <!-- ======================= main ==================== -->
@@ -38,17 +106,43 @@
           alt="Porträt eines Fotografen"
         />
         <div class="hero__content">
+          <div class="hero__motion">
+            <img
+              class="hero__viewfinder"
+              src="./images/ico/ViewFinder.svg"
+              alt=""
+            />
+            <div class="hero__marquee">
+              <div class="hero__marquee-track">
+                <div class="hero__marquee-group">
+                  <span>A Vision That Became a Movement</span>
+                  <span>United by a Shared Way of Seeing</span>
+                </div>
+
+                <div class="hero__marquee-group" aria-hidden="true">
+                  <span>A Vision That Became a Movement</span>
+                  <span>United by a Shared Way of Seeing</span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="hero__title-wrapper">
+            <img
+              class="hero__ampersand hero__ampersand--back"
+              src="./images/ico/&_back.svg"
+              alt=""
+            />
             <h1 class="hero__title">
               <span class="hero__title-line">
-                valerie <span class="hero__title-accent">&</span>
+                valerie
+                <span class="hero__title-accent hero__ampersand--font">&</span>
               </span>
 
               <span class="hero__title-line hero__title-line--vadim">
                 vadim
               </span>
 
-              <span class="hero__title-line"> doctorov </span>
+              <span class="hero__title-line">doctorov</span>
 
               <span
                 class="hero__title-line hero__title-line--art hero__title-accent"
@@ -59,6 +153,11 @@
                 >foundation</span
               >
             </h1>
+            <img
+              class="hero__ampersand hero__ampersand--front"
+              src="./images/ico/&_front.svg"
+              alt=""
+            />
           </div>
         </div>
       </section>
