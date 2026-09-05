@@ -274,13 +274,13 @@
 }
 
 .header__overlay-actions,
-.header__overlay-bottom-left,
+.header__overlay-contacts,
 .header__overlay-socials {
   display: flex;
   align-items: center;
 }
 
-.header__overlay-bottom-left {
+.header__overlay-contacts {
   gap: 30px;
 }
 
@@ -415,6 +415,8 @@
 @media (max-width: 660px) {
   .header__overlay {
     padding-inline: clamp(20px, 6vw, 40px);
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .header__overlay-link {
@@ -424,19 +426,13 @@
   }
 
   .header__overlay-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: flex-end;
   }
 
-  .header__overlay-bottom-left,
+  .header__overlay-contacts,
   .header__overlay-socials {
     flex-direction: column;
     gap: 8px;
-  }
-
-  .header__overlay-bottom-left,
-  .header__overlay-socials {
     align-items: flex-start;
   }
 
@@ -472,8 +468,8 @@
   }
 
   .header__call-button {
-    right: clamp(20px, 6vw, 40px);
-    bottom: 70px;
+    position: static;
+    margin-bottom: 20px;
   }
 
   .header__overlay-logo-text {
@@ -488,7 +484,17 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 370px) {
+  .header__overlay {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .header__overlay-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
 
 /* ======================== section abotAs =========================== */
