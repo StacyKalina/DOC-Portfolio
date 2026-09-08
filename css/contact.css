@@ -22,9 +22,6 @@
   z-index: 30;
 }
 
-.body-contact-page.menu-open .main-contact-page {
-  transform: translateY(-100%);
-}
 .body-contact-page.menu-open .header__nav {
   transform: translateY(-100svh);
 }

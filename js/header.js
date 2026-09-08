@@ -1,7 +1,7 @@
 function initHeader() {
   const overlay = document.querySelector(".header__overlay");
   const menuButton = document.querySelector(".header__menu-button");
-  const closeButton = document.querySelector(".header__close-button");
+  const menuText = document.querySelector(".header__menu-text");
 
   const homeLinks = document.querySelectorAll(
     ".header__logo, .header__overlay-logo, #home-link",
@@ -25,6 +25,7 @@ function initHeader() {
 
   function closeMenu() {
     document.body.classList.remove("menu-open");
+    menuText.textContent = "MENU";
 
     setTimeout(() => {
       overlay.classList.remove("is-open");
@@ -37,8 +38,7 @@ function initHeader() {
     } else {
       overlay.classList.add("is-open");
       document.body.classList.add("menu-open");
+      menuText.textContent = "CLOSE";
     }
   });
-
-  closeButton.addEventListener("click", closeMenu);
 }
