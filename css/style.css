@@ -58,7 +58,7 @@
 }
 /* --------------------------------------------------------------- */
 
-body.menu-open {
+body.scroll-locked {
   overflow: hidden;
 }
 
@@ -113,7 +113,7 @@ body.menu-open .page-shell {
   display: none;
 
   font-family: var(--font-main);
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
@@ -137,7 +137,7 @@ body.menu-open .header__logo-menu {
   top: 0;
   inset-inline: 0;
 
-  padding: 14px 20px 24px;
+  padding: 30px 40px 30px;
   isolation: isolate;
 
   z-index: 30;
@@ -172,7 +172,9 @@ body.menu-open .header__logo-menu {
 .hero {
   height: 100svh;
   display: grid;
-  grid-template-columns: calc(100svh - 50px) minmax(0, 1fr);
+  grid-template-columns:
+    min(calc(100svh - 50px), 48vw)
+    minmax(0, 1fr);
   background-color: var(--color-bg);
   gap: 25px;
   padding: 25px;
@@ -217,9 +219,9 @@ body.menu-open .header__logo-menu {
 .header__language-button,
 .header__contact {
   font-family: var(--font-main);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 
   color: var(--color-text);
@@ -237,16 +239,85 @@ body.menu-open .header__logo-menu {
   padding: 0;
   background: transparent;
   cursor: pointer;
+}
+
+.header__language-switcher {
+  position: relative;
+  display: none;
+}
+
+body.menu-open .header__language-switcher {
+  display: block;
+}
+
+.header__language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  min-width: 64px;
+  padding: 8px;
+
+  border: 1px solid rgba(141, 255, 106, 0.22);
+  border-radius: 6px;
+
+  background: rgba(5, 8, 7, 0.72);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 18px rgba(141, 255, 106, 0.08),
+    inset 0 0 12px rgba(141, 255, 106, 0.03);
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transform: translate(-50%, -6px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-body.menu-open .header__language-button {
+.header__language-menu button {
+  border: 0;
+  padding: 7px 10px;
+
+  background: transparent;
+  color: var(--color-text);
+
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.header__language-switcher.is-open .header__language-menu {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+
+  transform: translate(-50%, 0);
+}
+
+.header__language-menu button:hover {
+  color: var(--color-accent-green);
+  text-shadow:
+    0 0 6px currentColor,
+    0 0 12px currentColor;
 }
 
 .header__menu-button {
@@ -308,7 +379,7 @@ body.menu-open .header__language-button {
 /* ---------- title ----------- */
 
 .hero__title-wrapper {
-  padding-bottom: 10%;
+  padding-bottom: 15%;
   width: 64%;
   position: relative;
   z-index: 3;
@@ -386,15 +457,15 @@ body.menu-open .header__language-button {
   position: absolute;
 
   width: auto;
-  height: 14cqw;
+  height: 13cqw;
 
-  top: 75%;
-  left: 19%;
+  top: 77%;
+  left: 26%;
 }
 
 .hero__marquee {
   position: absolute;
-  top: calc(75% + 7cqw);
+  top: calc(77% + 6.5cqw);
   transform: translateY(-50%);
 }
 
@@ -450,7 +521,7 @@ body.menu-open .header__language-button {
 
   position: fixed;
   inset: 0;
-  padding: 60px 64px 70px;
+  padding: 30px 40px 50px;
   z-index: 20;
 
   display: grid;
@@ -492,9 +563,15 @@ body.menu-open .header__language-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 6vh;
+
+  width: max-content;
+  justify-self: center;
+
+  padding-top: 9vh;
   padding-bottom: 6vh;
-  gap: clamp(24px, 4vh, 56px);
+
+  gap: clamp(24px, 3vh, 56px);
+
   transform: translateY(3vh);
 }
 .header__overlay-link {
@@ -507,6 +584,7 @@ body.menu-open .header__language-button {
   font-family: var(--font-heading);
   font-size: clamp(44px, 5.5vw, 95px);
   line-height: 0.9;
+  letter-spacing: 0.03em;
 
   color: var(--color-accent);
   text-shadow:
@@ -541,8 +619,7 @@ body.menu-open .header__language-button {
   align-items: end;
 
   font-family: var(--font-main);
-  /* font-weight: 400; */
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
   font-size: 14px;
@@ -556,6 +633,7 @@ body.menu-open .header__language-button {
 
 .header__overlay-bottom-left {
   gap: 30px;
+  font-size: 16px;
 }
 
 .header__overlay-socials {

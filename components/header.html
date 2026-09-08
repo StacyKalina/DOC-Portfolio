@@ -12,7 +12,20 @@
       </span>
     </a>
     <div class="header__actions">
-      <button class="header__language-button" type="button">UA</button>
+      <div class="header__language-switcher">
+        <button
+          class="header__language-button"
+          type="button"
+          aria-expanded="false"
+        >
+          UA
+        </button>
+
+        <div class="header__language-menu">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="ua">UA</button>
+        </div>
+      </div>
 
       <button class="header__menu-button" type="button">
         <span class="header__menu-text">MENU</span>
