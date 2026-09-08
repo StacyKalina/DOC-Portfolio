@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,121 +13,20 @@
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="./js/components.js" defer></script>
     <script src="./js/header.js" defer></script>
+    <script src="./js/intro.js" defer></script>
     <title>DOC — Portfolio</title>
   </head>
 
   <body>
+    <!-- ======================= intro ==================== -->
+    <div class="intro">
+      <img class="intro__logo" src="./images/Logo_doc.svg" alt="" />
+    </div>
+
     <!-- ======================= header ==================== -->
-    <header class="header">
-      <nav class="header__nav">
-        <a class="header__logo" href="#">
-          <img
-            class="header__logo-image"
-            src="./images/Logo_doc.svg"
-            alt="Doctorov"
-          />
-        </a>
-        <div class="header__actions">
-          <button class="header__menu-button" type="button">MENU</button>
-
-          <a class="header__contact" href="#contact">LASS UNS REDEN</a>
-        </div>
-      </nav>
-      <div class="header__overlay">
-        <div class="header__overlay-top">
-          <a
-            href="./index.html"
-            class="header__overlay-logo"
-            aria-label="Doctorov — Home"
-          >
-            <span class="header__overlay-logo-text">
-              VALERIE & VADIM DOCTOROV
-              <span class="header__overlay-logo-accent">ART FOUNDATION</span>
-            </span>
-
-            <img
-              class="header__overlay-logo-image"
-              src="./images/Logo_doc.svg"
-              alt=""
-            />
-          </a>
-          <div class="header__overlay-actions">
-            <button class="header__language-button" type="button">UA</button>
-            <button class="header__close-button" type="button">CLOSE</button>
-          </div>
-        </div>
-        <nav class="header__overlay-nav">
-          <a href="#" class="header__overlay-link">
-            <span class="header__number-one">01</span>
-            <span>home</span>
-          </a>
-          <a href="#" class="header__overlay-link">
-            <span>02</span>
-            <span>about</span>
-          </a>
-          <a href="#" class="header__overlay-link">
-            <span>03</span>
-            <span>po<span class="header__overlay-r">r</span>tfolio</span>
-          </a>
-          <a href="#" class="header__overlay-link">
-            <span>04</span>
-            <span>community</span>
-          </a>
-        </nav>
-        <div class="header__overlay-bottom">
-          <div class="header__overlay-bottom-left">
-            <a class="header__overlay-book" href="#book">the book</a>
-            <a href="mailto:vv_doctorov@gmail.com"> vv_doctorov@gmail.com </a>
-          </div>
-
-          <div class="header__overlay-bottom-right">
-            <a
-              class="header__call-button"
-              href="https://wa.me/491234567890"
-              target="_blank"
-              rel="noopener"
-              aria-label="Write to us on WhatsApp"
-            >
-              <img
-                class="header__call-button-icon"
-                src="./images/ico/ico_call.svg"
-                alt=""
-              />
-            </a>
-
-            <div class="header__overlay-socials">
-              <a class="header__social-link" href="#" aria-label="YouTube">
-                <span class="header__social-text">youtube</span>
-                <img
-                  class="header__social-icon"
-                  src="./images/ico/ico_youtube_2.svg"
-                  alt=""
-                />
-              </a>
-
-              <a class="header__social-link" href="#" aria-label="LinkedIn">
-                <span class="header__social-text">linkedin</span>
-                <img
-                  class="header__social-icon"
-                  src="./images/ico/linkedin.svg"
-                  alt=""
-                />
-              </a>
-
-              <a class="header__social-link" href="#" aria-label="Facebook">
-                <span class="header__social-text">facebook</span>
-                <img
-                  class="header__social-icon"
-                  src="./images/ico/ico_facebook_2.svg"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div id="site-header"></div>
 
     <!-- ======================= main ==================== -->
     <main>
@@ -191,11 +90,12 @@
               alt=""
             />
           </div>
+          <a class="hero__contact" href="./contact.html"> Let's talk </a>
         </div>
       </section>
 
       <!-- =========================  бегущая строка  ================ -->
-      <section class="clients-marquee">
+      <!-- <section class="clients-marquee">
         <div class="clients-marquee__track">
           <div class="clients-marquee__group">
             <span class="clients-marquee__item">01 Ideation</span>
@@ -213,23 +113,23 @@
             <span class="clients-marquee__item">05 Post-production</span>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <!-- ===============================  Intro ================================= -->
+      <!-- ===============================  About ================================= -->
 
-      <section class="intro">
-        <div class="intro__main">
-          <h2 class="intro__title">
+      <!-- <section class="about">
+        <div class="about__main">
+          <h2 class="about__title">
             We are a united
-            <span class="intro__accent">community of photographers</span>
+            <span class="about__accent">community of photographers</span>
             by a passion for visual storytelling — bringing together different
             perspectives, ideas and experiences to create images that
-            <span class="intro__accent">stay in memory.</span>
+            <span class="about__accent">stay in memory.</span>
           </h2>
         </div>
-        <div class="intro__side">
-          <h3 class="intro__side__label">WHO WE ARE</h3>
-          <div class="intro__side__social">
+        <div class="about__side">
+          <h3 class="about__side-label">WHO WE ARE</h3>
+          <div class="about__side-social">
             <a href="#" aria-label="Behance">
               <img src="./images/ico/behance.svg" alt="" />
             </a>
@@ -243,32 +143,7 @@
             </a>
           </div>
         </div>
-      </section>
-
-      <!-- ===============================  Chess ================================= -->
-      <!-- 
-      <section class="aboutAs">
-        <div class="aboutAs__chessBack"></div>
       </section> -->
-
-      <!-- ============================================================================ -->
-
-      <section class="Calculator">
-        <div class="Calculator__Items">
-          <input class="Calculator__Itrms__Input1" type="text" />
-          <select class="Calculator__Itrms__Operator" name="" id="">
-            <option value="">+</option>
-            <option value="">-</option>
-            <option value="">*</option>
-            <option value="">/</option>
-          </select>
-          <input class="Calculator__Itrms__Input2" type="text" />
-
-          <input class="Calculator__Itrms__result" type="text" />
-        </div>
-      </section>
-
-      input
     </main>
   </body>
 </html>

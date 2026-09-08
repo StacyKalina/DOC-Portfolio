@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Syncopate:wght@400;700&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <script src="./js/header.js" defer></script>
+    <script src="./js/components.js" defer></script>
+    <script src="./js/contact.js" defer></script>
+
+    <title>Contact — Valerie & Vadim Doctorov Art Foundation</title>
+  </head>
+
+  <body class="body-contact-page">
+    <div id="site-header"></div>
+
+    <!-- ======================= main ==================== -->
+
+    <main class="main-contact-page">
+      <div class="contact__content">
+        <div class="contact__intro">
+          <h1 class="contact__title">
+            <span class="contact__title-line">LET'S</span>
+            <span class="contact__title-line contact__title-line--accent"
+              >CHAT!</span
+            >
+          </h1>
+          <p class="contact__text">
+            Tell us about your idea, project or collaboration. We’d love to hear
+            from you.
+          </p>
+        </div>
+
+        <form action="" class="contact__form" novalidate>
+          <div class="contact__field">
+            <div class="contact__field-head">
+              <label for="name">Your name</label>
+              <span class="contact__error"> Please enter your name </span>
+            </div>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="What may we call you?"
+              required
+            />
+          </div>
+          <div class="contact__field">
+            <div class="contact__field-head">
+              <label for="email">Your email</label>
+              <span class="contact__error"> Please enter a valid email </span>
+            </div>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="always@yourservice.com"
+              required
+            />
+          </div>
+          <div class="contact__field">
+            <div class="contact__field-head">
+              <label for="message">Your message</label>
+              <span class="contact__error"> Please enter your message </span>
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Feel free to share your thoughts with us — we’d love to hear from you!"
+              required
+            ></textarea>
+          </div>
+          <div class="contact__field contact__field--feedback">
+            <label for="feedback">Feedback</label>
+            <textarea
+              id="feedback"
+              name="feedback"
+              placeholder="We’d love to hear your thoughts."
+            ></textarea>
+          </div>
+
+          <label class="contact__consent">
+            <input id="privacy" type="checkbox" name="privacy" required />
+            <span class="contact__checkbox"></span>
+            <span>
+              I have read the Privacy Policy and agree to the processing of my
+              data.
+            </span>
+          </label>
+
+          <button class="contact__submit" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <div class="contact__image">
+        <img src="./images/form_hero.jpg" alt="" />
+      </div>
+    </main>
+  </body>
+</html>
