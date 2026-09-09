@@ -56,6 +56,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: 28% center;
 }
 
 /* ----------------- Contact - hero ------------------------- */
