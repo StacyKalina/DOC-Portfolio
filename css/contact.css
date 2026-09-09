@@ -70,6 +70,10 @@
   padding-top: clamp(110px, 17vh, 200px);
 }
 
+.body-contact-page .header__contact {
+  display: none;
+}
+
 .contact__title {
   font-family: var(--font-heading);
   font-size: clamp(64px, 7.5vw, 130px);

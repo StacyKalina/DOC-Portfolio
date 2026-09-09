@@ -2,9 +2,9 @@ function initHeader() {
   const overlay = document.querySelector(".header__overlay");
   const menuButton = document.querySelector(".header__menu-button");
   const menuText = document.querySelector(".header__menu-text");
-  const contactButton = document.querySelector(".header__contact");
-  const languageSwitcher = document.querySelector(".header__language-switcher");
+  // const contactButton = document.querySelector(".header__contact");
   const languageButton = document.querySelector(".header__language-button");
+  const languageSwitcher = document.querySelector(".header__language-switcher");
 
   const languageOptions = document.querySelectorAll(
     ".header__language-menu button",
@@ -13,11 +13,6 @@ function initHeader() {
   const homeLinks = document.querySelectorAll(
     ".header__logo, .header__overlay-logo, #home-link",
   );
-
-  if (document.body.classList.contains("body-contact-page")) {
-    contactButton.textContent = "PROJECTS";
-    contactButton.href = "./index.html";
-  }
 
   homeLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -42,6 +37,7 @@ function initHeader() {
 
     setTimeout(() => {
       overlay.classList.remove("is-open");
+      document.body.classList.remove("scroll-locked");
     }, 1100);
   }
 
@@ -57,6 +53,7 @@ function initHeader() {
   });
 
   menuButton.addEventListener("click", () => {
+    console.log("MENU CLICK");
     if (document.body.classList.contains("menu-open")) {
       closeMenu();
     } else {
